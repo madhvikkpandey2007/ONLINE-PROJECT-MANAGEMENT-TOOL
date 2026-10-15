@@ -1,124 +1,150 @@
-ProjectFlow – Online Project Management Tool
-ProjectFlow is a modern, commercial-grade full-stack Online Project Management Tool designed for high-performance software engineering teams and enterprise organizations. It features Role-Based Access Control (RBAC), real-time progress calculations, interactive graphical analytics, task assignment workflows, and JWT authentication.
+# 🚀 Online Project Management Tool
 
-🚀 Key Features
-👑 Admin Management
-User Administration: Create, edit, deactivate, and delete user accounts. Assign roles (ADMIN, PROJECT_MANAGER, TEAM_MEMBER).
-System Metrics & Analytics: Monitor total users, active accounts, project status distributions, and task completion velocity via interactive charts.
-System Settings: Configure application branding, default project/task statuses, email notifications, and self-registration policies.
-📊 Project Manager Capabilities
-Project Lifecycle Management: Initialize projects with title, description, start/end dates, and status (PLANNING, ACTIVE, ON_HOLD, COMPLETED, CANCELLED).
-Task Assignment: Assign tasks to team members with set priorities (LOW, MEDIUM, HIGH, URGENT) and target due dates. Triggers toast notification: "Task assigned successfully."
-Progress Monitoring: Automatic real-time progress calculation based on task completion ((completed / total) * 100).
-Team Workload Breakdown: Track individual task allocation and performance across team members.
-💻 Team Member Features
-My Tasks Dashboard: View assigned tasks in a responsive table/card interface with status update dropdowns (TODO ➔ IN_PROGRESS ➔ REVIEW ➔ COMPLETED).
-Overdue Alerts: Automatic detection and visual highlighting of overdue tasks.
-Project Information: Access assigned project timelines, team managers, and completion statistics.
-Profile Management: Update personal name, email, and password.
-🔑 Demo Credentials (Ready Out-Of-The-Box)
-The application automatically seeds realistic demo data on launch:
+A web-based project management application designed to simplify project organization, task tracking, and workflow management through a centralized platform.
 
-Role	Email	Password	Access Rights
-Admin	admin@projectflow.com	admin123	Full System & User CRUD, Settings, Metrics
-Project Manager	manager@projectflow.com	manager123	Project Creation, Task Assignment, Monitoring
-Developer (Team Member)	developer@projectflow.com	dev123	Assigned Tasks, Task Status Updates
-UI/UX Designer (Team Member)	designer@projectflow.com	design123	Assigned Tasks, Profile Management
-QA Tester (Team Member)	tester@projectflow.com	test123	Assigned Tasks, Task Status Updates
-💡 Note: The Login screen includes one-click demo login buttons for instant testing!
+## 📌 Overview
 
-🛠️ Technology Stack
-Backend:
+Managing projects efficiently requires clear organization, proper task tracking, and visibility into ongoing work. The **Online Project Management Tool** aims to bring these activities together in one place, helping users organize project-related work and manage progress more effectively.
 
-Java 17+ / Spring Boot 3.2
-Spring Security 6 with JWT Authentication & BCrypt Password Hashing
-Spring Data JPA with H2 / MySQL Relational Databases
-SpringDoc OpenAPI / Swagger UI (/swagger-ui.html)
-Maven (mvnw.cmd wrapper included)
-Frontend:
+This project was developed to apply software development concepts to a practical application, with an emphasis on usability, maintainability, and real-world project management workflows.
 
-React 18 & Vite
-React Router v6
-TailwindCSS with Glassmorphism aesthetic & dark/light accents
-Lucide React Iconography
-Recharts for Interactive Pie, Bar, and Line Analytics
-📂 Project Structure
-projectflow/
-├── backend/
-│   ├── src/main/java/com/projectflow/
-│   │   ├── config/          # Security, CORS, Swagger & DataInitializer
-│   │   ├── controller/      # REST API Controllers
-│   │   ├── dto/             # Request & Response Data Transfer Objects
-│   │   ├── entity/          # JPA Domain Entities (User, Project, Task, etc.)
-│   │   ├── exception/       # Global Exception Handler
-│   │   ├── repository/      # Spring Data JPA Repositories
-│   │   ├── security/        # JWT Filter, Token Provider, UserDetails
-│   │   └── service/         # Business Logic Services
-│   ├── src/main/resources/
-│   │   └── application.yml  # Dual H2 + MySQL configuration
-│   ├── mvnw.cmd             # Embedded Maven Wrapper
-│   └── pom.xml
-│
-├── frontend/
-│   ├── src/
-│   │   ├── components/      # Navbar, Sidebar, Modal, StatusBadge, Toast
-│   │   ├── context/         # AuthContext & ToastContext
-│   │   ├── layouts/         # Responsive DashboardLayout
-│   │   ├── pages/           # Admin, Manager, Member dashboards & modules
-│   │   ├── services/        # Axios API Client & Services
-│   │   ├── App.jsx          # Protected Routes & RBAC Router
-│   │   └── main.jsx
-│   └── package.json
-│
-└── README.md
-⚡ How to Run the Application
-1. Start the Java Backend
-Open a terminal in the backend/ directory and run:
+## ✨ Features
 
-cd backend
-.\mvnw.cmd spring-boot:run
-(The backend runs on http://localhost:8080 with auto-seeded H2 file database at ./data/projectflowdb)
+- **Project Management** — Organize and manage project-related information.
+- **Task Tracking** — Keep track of work items and their progress.
+- **Centralized Workspace** — Access project information through a single application.
+- **User-Friendly Interface** — Navigate project-related workflows through a web interface.
+- **Structured Workflow** — Keep project activities organized and easier to manage.
 
-Swagger API Docs: Navigate to http://localhost:8080/swagger-ui.html
-H2 Database Console: Navigate to http://localhost:8080/h2-console (JDBC URL: jdbc:h2:file:./data/projectflowdb, Username: sa, Password: leave blank).
-🛢️ Using MySQL (Optional)
-To switch to a local MySQL database, edit backend/src/main/resources/application.yml and uncomment the MySQL configuration lines:
+*Note: Retain only the features implemented in the current version of the application.*
 
-spring:
-  datasource:
-    url: jdbc:mysql://localhost:3306/projectflow?createDatabaseIfNotExist=true&useSSL=false
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    username: root
-    password: your_mysql_password
-  jpa:
-    database-platform: org.hibernate.dialect.MySQLDialect
-2. Start the React Frontend
-Open a separate terminal in the frontend/ directory and run:
+## 🛠️ Tech Stack
 
-cd frontend
+The technologies used in this project are listed below. Update this section to match the actual implementation.
+
+- **Frontend:** [Your frontend technologies]
+- **Backend:** [Your backend technologies]
+- **Database:** [Your database]
+- **Development Tools:** Git, GitHub, and [Your IDE or other tools]
+
+## 📂 Project Structure
+
+The repository contains the source code and resources required for the application.
+
+```text
+ONLINE-PROJECT-MANAGEMENT-TOOL/
+├── [frontend-directory]/
+├── [backend-directory]/
+├── [configuration-files]
+├── README.md
+└── ...
+```
+
+Replace the example entries with the actual folders and files in the repository.
+
+## ⚙️ Getting Started
+
+Follow these steps to set up the project locally.
+
+### Prerequisites
+
+Install the tools required by the project:
+
+- Git
+- [Required runtime or SDK]
+- [Required database, if applicable]
+- [Required package manager or build tool]
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/madhvikkpandey2007/ONLINE-PROJECT-MANAGEMENT-TOOL.git
+```
+
+### 2. Navigate to the Project Directory
+
+```bash
+cd ONLINE-PROJECT-MANAGEMENT-TOOL
+```
+
+### 3. Install Dependencies
+
+Install the dependencies using the appropriate package manager or build tool for your project.
+
+```bash
+# Example for a Node.js project
+npm install
+```
+
+### 4. Configure the Application
+
+Set up any required environment variables, database connections, API credentials, or application properties.
+
+If the project uses environment variables, create a local configuration file based on the variables required by the application. Never commit passwords, API keys, or other secrets to GitHub.
+
+### 5. Run the Application
+
+Start the application using the appropriate development command for the configured frontend and backend.
+
+```bash
+# Example for a Node.js project
 npm run dev
-(The frontend runs on http://localhost:5173 with proxy pre-configured to http://localhost:8080)
+```
 
-🔄 End-to-End Demonstration Workflow
-Admin Login:
+The commands above are examples. Use the actual installation and startup commands for this repository.
 
-Sign in as admin@projectflow.com / admin123.
-Access Admin Dashboard to view system metrics, user role distribution, and system configuration settings.
-Create a new Project Manager user account.
-Project Manager Login:
+## 🖥️ Application Screenshots
 
-Sign in as manager@projectflow.com / manager123.
-Access Manager Dashboard to view managed projects.
-Click Create Project ➔ Fill details ➔ Receives confirmation: "Project created successfully."
-Click Assign New Task ➔ Assign task to Developer/Designer ➔ Receives confirmation: "Task assigned successfully."
-Team Member Login:
+Add screenshots of the main application screens here to help visitors understand the interface and functionality.
 
-Sign in as developer@projectflow.com / dev123.
-Access Member Dashboard to view assigned tasks.
-Change task status from IN_PROGRESS ➔ COMPLETED using the dropdown.
-Receives confirmation: "Task status updated successfully."
-Real-time Metric Calculation:
+Suggested screenshots:
+- Main dashboard
+- Project management interface
+- Task management interface
+- Any additional implemented features
 
-Switch back to Manager or Admin Dashboard: Notice project progress %, task completion count, and interactive graphs updated automatically.
-📄 License & Presentation Note
-Built for 3rd-semester live project demonstration. # online-project-management-tool # online-project-management-tool
+Example Markdown:
+
+```markdown
+![Application Dashboard](screenshots/dashboard.png)
+```
+
+## 🎯 Project Objectives
+
+- Apply software engineering principles to a practical application.
+- Develop a centralized approach to project organization.
+- Practice application development, debugging, and testing.
+- Improve code organization and maintainability.
+- Gain experience with Git, GitHub, and collaborative development workflows.
+
+## 🔮 Future Enhancements
+
+Potential improvements, depending on the current implementation, include:
+
+- Role-based access control and user permissions
+- Task priorities, deadlines, and status filters
+- Team collaboration and task assignment
+- Progress analytics and project dashboards
+- Notifications and deadline reminders
+- Deployment and automated testing
+
+## 🤝 Contributing
+
+Contributions and suggestions are welcome.
+
+1. Fork the repository.
+2. Create a feature branch.
+3. Implement and test your changes.
+4. Commit your changes with a descriptive message.
+5. Open a pull request describing your improvements.
+
+## 👨‍💻 Author
+
+**Madhvik Pandey**
+
+- GitHub: [@madhvikkpandey2007](https://github.com/madhvikkpandey2007)
+- Project Repository: [Online Project Management Tool](https://github.com/madhvikkpandey2007/ONLINE-PROJECT-MANAGEMENT-TOOL)
+
+## 📄 License
+
+No license information is specified here. Add a license section once a license has been selected and included in the repository.
